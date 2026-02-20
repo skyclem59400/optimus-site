@@ -9,6 +9,7 @@ Site vitrine pour **Optimus**, cabinet de conseil specialise dans l'integration 
 - **Tailwind CSS v4** avec tokens custom (`@theme inline`)
 - **Three.js** via React Three Fiber — scene 3D hero (reseau neuronal interactif)
 - **Motion** (Framer Motion) — animations scroll-reveal, stagger, accordion
+- **next-themes** — toggle dark/light mode avec persistance localStorage
 
 ## Pages
 
@@ -27,7 +28,8 @@ Site vitrine pour **Optimus**, cabinet de conseil specialise dans l'integration 
 - **Cartes 3D** : effet tilt au hover avec glow suivant la souris
 - **FAQ animee** : accordion avec AnimatePresence (ouverture/fermeture fluide)
 - **Barre de progression** : indicateur de scroll dans le header
-- **Theme sombre premium** : palette teal (#2dd4bf) sur fond noir (#030712)
+- **Dark/Light mode** : toggle soleil/lune dans le header, sombre par defaut, toutes les couleurs s'adaptent via CSS variables
+- **Palette** : teal (#2dd4bf) en couleur primaire, fond sombre (#030712) ou clair (#f8fafc) selon le mode
 
 ## Demarrage
 
@@ -63,5 +65,6 @@ src/
 │   ├── HeroScene.tsx         # Scene Three.js (reseau neuronal 3D)
 │   ├── HeroSceneLoader.tsx   # Wrapper client pour import dynamique SSR:false
 │   ├── AnimatedSection.tsx   # Wrapper scroll-reveal reutilisable
-│   └── AnimatedCard.tsx      # Carte avec tilt 3D au hover
+│   ├── AnimatedCard.tsx      # Carte avec tilt 3D au hover
+│   └── ThemeProvider.tsx     # Wrapper next-themes (dark/light mode)
 ```
