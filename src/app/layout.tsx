@@ -27,6 +27,17 @@ export const metadata: Metadata = {
     "consultant IA",
     "transformation digitale",
   ],
+  icons: {
+    icon: "/favicon-32x32.png",
+    apple: "/apple-icon.png",
+  },
+  openGraph: {
+    title: "Optimus | Integration IA en Entreprise",
+    description:
+      "Automatisation, agents IA, workflows intelligents - nous transformons votre business avec l'IA.",
+    images: ["/og-image.png"],
+    type: "website",
+  },
 };
 
 export default function RootLayout({
