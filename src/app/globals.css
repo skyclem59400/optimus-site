@@ -1,37 +1,46 @@
 @import "tailwindcss";
 
+/* Static tokens (mode-independent) — inlined into utilities */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
   --color-primary: #2dd4bf;
   --color-primary-dark: #14b8a6;
   --color-primary-light: #5eead4;
-  --color-accent: var(--accent);
-  --color-accent-dark: var(--accent-dark);
-  --color-accent-light: var(--accent-light);
-  --color-surface: var(--surface);
-  --color-surface-light: var(--surface-light);
-  --color-muted: var(--muted);
-  --color-subtle: var(--subtle);
-  --color-border: var(--border-color);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
+/*
+ * Dynamic color tokens — registered with Tailwind via @theme reference
+ * so utilities like bg-background, text-muted, etc. are generated.
+ * Actual runtime values are defined in :root / .dark below.
+ * Using reference (not inline) prevents Turbopack from statically
+ * resolving the values and dropping the .dark overrides.
+ */
+@theme reference {
+  --color-background: #f8fafc;
+  --color-foreground: #0f172a;
+  --color-accent: #dbeafe;
+  --color-accent-dark: #bfdbfe;
+  --color-accent-light: #93c5fd;
+  --color-surface: #f1f5f9;
+  --color-surface-light: #e2e8f0;
+  --color-muted: #64748b;
+  --color-subtle: #94a3b8;
+  --color-border: rgba(15, 23, 42, 0.1);
+}
+
 /* Light mode */
 :root {
-  --background: #f8fafc;
-  --foreground: #0f172a;
-  --accent: #dbeafe;
-  --accent-dark: #bfdbfe;
-  --accent-light: #93c5fd;
-  --surface: #f1f5f9;
-  --surface-light: #e2e8f0;
-  --muted: #64748b;
-  --subtle: #94a3b8;
-  --border-color: rgba(15, 23, 42, 0.1);
-  --glass-bg: rgba(248, 250, 252, 0.85);
-  --glass-border: rgba(45, 212, 191, 0.2);
+  --color-background: #f8fafc;
+  --color-foreground: #0f172a;
+  --color-accent: #dbeafe;
+  --color-accent-dark: #bfdbfe;
+  --color-accent-light: #93c5fd;
+  --color-surface: #f1f5f9;
+  --color-surface-light: #e2e8f0;
+  --color-muted: #64748b;
+  --color-subtle: #94a3b8;
+  --color-border: rgba(15, 23, 42, 0.1);
   --glow-alpha: 0.25;
   --spotlight-alpha: 0.08;
   --scrollbar-track: #e2e8f0;
@@ -40,18 +49,16 @@
 
 /* Dark mode */
 .dark {
-  --background: #030712;
-  --foreground: #f9fafb;
-  --accent: #1e3a5f;
-  --accent-dark: #0f2744;
-  --accent-light: #2a4f7a;
-  --surface: #111827;
-  --surface-light: #1f2937;
-  --muted: #6b7280;
-  --subtle: #9ca3af;
-  --border-color: rgba(255, 255, 255, 0.08);
-  --glass-bg: rgba(17, 24, 39, 0.8);
-  --glass-border: rgba(45, 212, 191, 0.1);
+  --color-background: #030712;
+  --color-foreground: #f9fafb;
+  --color-accent: #1e3a5f;
+  --color-accent-dark: #0f2744;
+  --color-accent-light: #2a4f7a;
+  --color-surface: #111827;
+  --color-surface-light: #1f2937;
+  --color-muted: #6b7280;
+  --color-subtle: #9ca3af;
+  --color-border: rgba(255, 255, 255, 0.08);
   --glow-alpha: 0.15;
   --spotlight-alpha: 0.04;
   --scrollbar-track: #111827;
@@ -59,8 +66,8 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--color-background);
+  color: var(--color-foreground);
   font-family: var(--font-sans), system-ui, sans-serif;
 }
 
@@ -100,11 +107,16 @@ html {
   box-shadow: 0 0 20px rgba(45, 212, 191, var(--glow-alpha)), 0 0 60px rgba(45, 212, 191, calc(var(--glow-alpha) * 0.3));
 }
 
-/* Glass morphism */
+/* Glass morphism — explicit light/dark to avoid Turbopack inlining vars */
 .glass {
-  background: var(--glass-bg);
   backdrop-filter: blur(12px);
-  border: 1px solid var(--glass-border);
+  background: rgba(248, 250, 252, 0.85);
+  border: 1px solid rgba(45, 212, 191, 0.2);
+}
+
+.dark .glass {
+  background: rgba(17, 24, 39, 0.8);
+  border: 1px solid rgba(45, 212, 191, 0.1);
 }
 
 /* Animations */
@@ -152,13 +164,21 @@ html {
   inset: 0;
   background: radial-gradient(
     600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-    rgba(45, 212, 191, var(--spotlight-alpha)),
+    rgba(45, 212, 191, 0.08),
     transparent 60%
   );
   pointer-events: none;
   opacity: 0;
   transition: opacity 0.4s ease;
   z-index: 0;
+}
+
+.dark .spotlight-section::before {
+  background: radial-gradient(
+    600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(45, 212, 191, 0.04),
+    transparent 60%
+  );
 }
 
 .spotlight-section:hover::before {
