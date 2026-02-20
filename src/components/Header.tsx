@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { motion, useScroll, useSpring } from "motion/react";
 
 const navigation = [
   { name: "Accueil", href: "/" },
@@ -14,6 +15,13 @@ const navigation = [
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 glass">
@@ -93,6 +101,10 @@ export default function Header() {
           </div>
         </div>
       )}
+      <motion.div
+        className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary to-primary-light origin-left"
+        style={{ scaleX }}
+      />
     </header>
   );
 }

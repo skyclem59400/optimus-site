@@ -1,5 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import AnimatedSection, { AnimatedItem } from "@/components/AnimatedSection";
+import AnimatedCard from "@/components/AnimatedCard";
 
 export const metadata: Metadata = {
   title: "A propos | Optimus - Integration IA en Entreprise",
@@ -75,7 +77,7 @@ export default function AboutPage() {
           <div className="absolute bottom-1/4 right-1/4 h-96 w-96 rounded-full bg-accent/10 blur-3xl" />
         </div>
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl text-center animate-fade-in-up">
+          <AnimatedSection className="mx-auto max-w-3xl text-center">
             <p className="text-sm font-semibold uppercase tracking-widest text-primary">A propos</p>
             <h1 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
               A propos d&apos;<span className="gradient-text">Optimus</span>
@@ -83,32 +85,34 @@ export default function AboutPage() {
             <p className="mt-6 text-lg leading-8 text-gray-400 sm:text-xl">
               Rendre l&apos;intelligence artificielle accessible, concrete et performante pour les entreprises qui veulent prendre une longueur d&apos;avance.
             </p>
-          </div>
+          </AnimatedSection>
         </div>
       </section>
 
       {/* Vision */}
       <section className="py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="relative mx-auto max-w-4xl rounded-2xl border border-primary/20 bg-gradient-to-br from-surface via-surface-light/50 to-surface p-8 sm:p-12 lg:p-16">
-            <div className="absolute top-0 left-0 h-24 w-24 rounded-tl-2xl border-t-2 border-l-2 border-primary/40" />
-            <div className="absolute bottom-0 right-0 h-24 w-24 rounded-br-2xl border-b-2 border-r-2 border-primary/40" />
+          <AnimatedSection>
+            <div className="relative mx-auto max-w-4xl rounded-2xl border border-primary/20 bg-gradient-to-br from-surface via-surface-light/50 to-surface p-8 sm:p-12 lg:p-16">
+              <div className="absolute top-0 left-0 h-24 w-24 rounded-tl-2xl border-t-2 border-l-2 border-primary/40" />
+              <div className="absolute bottom-0 right-0 h-24 w-24 rounded-br-2xl border-b-2 border-r-2 border-primary/40" />
 
-            <h2 className="text-2xl font-bold tracking-tight sm:text-3xl lg:text-4xl">
-              L&apos;IA n&apos;est plus une option, <span className="gradient-text">c&apos;est un avantage strategique.</span>
-            </h2>
-            <div className="mt-8 space-y-6 text-gray-400 leading-7 sm:text-lg">
-              <p>
-                L&apos;intelligence artificielle transforme profondement la maniere dont les entreprises operent. Celles qui l&apos;adoptent aujourd&apos;hui gagnent en productivite, en precision et en agilite.
-              </p>
-              <p>
-                <strong className="text-foreground">Optimus</strong> est ne d&apos;un constat simple : la plupart des entreprises savent que l&apos;IA est importante, mais peu savent par ou commencer ou comment l&apos;integrer efficacement.
-              </p>
-              <p>
-                Notre mission est de combler ce fosse. Nous traduisons le potentiel de l&apos;IA en solutions concretes, deployees et fonctionnelles, qui generent de la valeur des le premier jour.
-              </p>
+              <h2 className="text-2xl font-bold tracking-tight sm:text-3xl lg:text-4xl">
+                L&apos;IA n&apos;est plus une option, <span className="gradient-text">c&apos;est un avantage strategique.</span>
+              </h2>
+              <div className="mt-8 space-y-6 text-gray-400 leading-7 sm:text-lg">
+                <p>
+                  L&apos;intelligence artificielle transforme profondement la maniere dont les entreprises operent. Celles qui l&apos;adoptent aujourd&apos;hui gagnent en productivite, en precision et en agilite.
+                </p>
+                <p>
+                  <strong className="text-foreground">Optimus</strong> est ne d&apos;un constat simple : la plupart des entreprises savent que l&apos;IA est importante, mais peu savent par ou commencer ou comment l&apos;integrer efficacement.
+                </p>
+                <p>
+                  Notre mission est de combler ce fosse. Nous traduisons le potentiel de l&apos;IA en solutions concretes, deployees et fonctionnelles, qui generent de la valeur des le premier jour.
+                </p>
+              </div>
             </div>
-          </div>
+          </AnimatedSection>
         </div>
       </section>
 
@@ -121,16 +125,16 @@ export default function AboutPage() {
           </div>
 
           <div className="mt-16 flex flex-col items-center gap-12 lg:flex-row lg:items-start lg:gap-16">
-            <div className="flex-shrink-0">
+            <AnimatedSection direction="left" className="flex-shrink-0">
               <div className="relative">
                 <div className="flex h-48 w-48 items-center justify-center rounded-2xl bg-gradient-to-br from-primary/20 via-accent to-primary/20 lg:h-64 lg:w-64">
                   <span className="text-5xl font-bold text-primary lg:text-6xl">CS</span>
                 </div>
                 <div className="absolute -inset-1 -z-10 rounded-2xl bg-gradient-to-br from-primary/30 to-accent-light/30 blur-md" />
               </div>
-            </div>
+            </AnimatedSection>
 
-            <div className="flex-1 text-center lg:text-left">
+            <AnimatedSection direction="right" delay={0.15} className="flex-1 text-center lg:text-left">
               <h3 className="text-2xl font-bold">Clement Scailteux</h3>
               <p className="mt-1 text-primary font-medium">Fondateur &amp; Consultant IA</p>
 
@@ -146,14 +150,16 @@ export default function AboutPage() {
                 </p>
               </div>
 
-              <div className="mt-8 flex flex-wrap justify-center gap-3 lg:justify-start">
+              <AnimatedSection stagger className="mt-8 flex flex-wrap justify-center gap-3 lg:justify-start">
                 {["Automatisation IA", "Systemes agentiques", "Transformation digitale", "Conseil strategique"].map((skill) => (
-                  <span key={skill} className="rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-sm font-medium text-primary">
-                    {skill}
-                  </span>
+                  <AnimatedItem key={skill}>
+                    <span className="rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-sm font-medium text-primary">
+                      {skill}
+                    </span>
+                  </AnimatedItem>
                 ))}
-              </div>
-            </div>
+              </AnimatedSection>
+            </AnimatedSection>
           </div>
         </div>
       </section>
@@ -161,69 +167,73 @@ export default function AboutPage() {
       {/* Valeurs */}
       <section className="py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl text-center">
+          <AnimatedSection className="mx-auto max-w-3xl text-center">
             <p className="text-sm font-semibold uppercase tracking-widest text-primary">Nos valeurs</p>
             <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">Ce qui guide chacune de nos interventions</h2>
-          </div>
+          </AnimatedSection>
 
-          <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2">
+          <AnimatedSection stagger className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2">
             {values.map((value) => (
-              <div key={value.title} className="group relative rounded-2xl border border-white/5 bg-surface p-8 transition-all duration-300 hover:border-primary/20 hover:bg-surface-light">
+              <AnimatedCard key={value.title} className="group relative rounded-2xl border border-white/5 bg-surface p-8 transition-all duration-300 hover:border-primary/20 hover:bg-surface-light">
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors group-hover:bg-primary/20">
                   {value.icon}
                 </div>
                 <h3 className="mt-6 text-xl font-semibold">{value.title}</h3>
                 <p className="mt-3 text-gray-400 leading-7">{value.description}</p>
-              </div>
+              </AnimatedCard>
             ))}
-          </div>
+          </AnimatedSection>
         </div>
       </section>
 
       {/* Technologies */}
       <section className="py-20 lg:py-28 bg-surface/50">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl text-center">
+          <AnimatedSection className="mx-auto max-w-3xl text-center">
             <p className="text-sm font-semibold uppercase tracking-widest text-primary">Technologies</p>
             <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">Les outils que nous maitrisons</h2>
-          </div>
+          </AnimatedSection>
 
-          <div className="mt-16 flex flex-wrap justify-center gap-4">
+          <AnimatedSection stagger staggerDelay={0.05} className="mt-16 flex flex-wrap justify-center gap-4">
             {technologies.map((tech) => (
-              <div key={tech.name} className="group rounded-full border border-white/10 bg-surface px-6 py-3 transition-all duration-300 hover:border-primary/30 hover:bg-surface-light">
-                <span className="text-sm font-medium text-gray-300 transition-colors group-hover:text-primary">{tech.name}</span>
-                <span className="ml-2 rounded-full bg-white/5 px-2 py-0.5 text-xs text-muted group-hover:bg-primary/10 group-hover:text-primary/70">{tech.category}</span>
-              </div>
+              <AnimatedItem key={tech.name}>
+                <div className="group rounded-full border border-white/10 bg-surface px-6 py-3 transition-all duration-300 hover:border-primary/30 hover:bg-surface-light">
+                  <span className="text-sm font-medium text-gray-300 transition-colors group-hover:text-primary">{tech.name}</span>
+                  <span className="ml-2 rounded-full bg-white/5 px-2 py-0.5 text-xs text-muted group-hover:bg-primary/10 group-hover:text-primary/70">{tech.category}</span>
+                </div>
+              </AnimatedItem>
             ))}
-          </div>
+          </AnimatedSection>
         </div>
       </section>
 
       {/* CTA */}
       <section className="py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="relative mx-auto max-w-3xl overflow-hidden rounded-3xl border border-white/5 bg-surface p-12 text-center sm:p-16 lg:p-20">
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 h-48 w-96 rounded-full bg-primary/10 blur-3xl" />
-            <div className="relative">
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-                Envie de <span className="gradient-text">collaborer</span> ?
-              </h2>
-              <p className="mt-4 text-lg text-gray-400">
-                Discutons de votre projet et explorons ensemble comment l&apos;IA peut transformer votre activite.
-              </p>
-              <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-                <Link href="/contact" className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-3.5 text-base font-semibold text-gray-900 transition-all hover:bg-primary-light hover:shadow-lg hover:shadow-primary/20">
-                  Parlons de votre projet
-                  <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                  </svg>
-                </Link>
-                <Link href="/services" className="inline-flex items-center gap-2 rounded-full border border-white/10 px-8 py-3.5 text-base font-medium text-gray-300 transition-all hover:border-primary/30 hover:text-primary">
-                  Decouvrir nos services
-                </Link>
+          <AnimatedSection>
+            <div className="relative mx-auto max-w-3xl overflow-hidden rounded-3xl border border-white/5 bg-surface p-12 text-center sm:p-16 lg:p-20">
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 h-48 w-96 rounded-full bg-primary/10 blur-3xl" />
+              <div className="relative">
+                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+                  Envie de <span className="gradient-text">collaborer</span> ?
+                </h2>
+                <p className="mt-4 text-lg text-gray-400">
+                  Discutons de votre projet et explorons ensemble comment l&apos;IA peut transformer votre activite.
+                </p>
+                <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+                  <Link href="/contact" className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-3.5 text-base font-semibold text-gray-900 transition-all hover:bg-primary-light hover:shadow-lg hover:shadow-primary/20">
+                    Parlons de votre projet
+                    <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                    </svg>
+                  </Link>
+                  <Link href="/services" className="inline-flex items-center gap-2 rounded-full border border-white/10 px-8 py-3.5 text-base font-medium text-gray-300 transition-all hover:border-primary/30 hover:text-primary">
+                    Decouvrir nos services
+                  </Link>
+                </div>
               </div>
             </div>
-          </div>
+          </AnimatedSection>
         </div>
       </section>
     </div>

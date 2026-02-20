@@ -1,5 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import AnimatedSection from "@/components/AnimatedSection";
+import AnimatedCard from "@/components/AnimatedCard";
 
 export const metadata: Metadata = {
   title: "Services | Optimus - Integration IA en Entreprise",
@@ -115,16 +117,22 @@ export default function ServicesPage() {
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[500px] w-[500px] rounded-full bg-primary/5 blur-[120px]" />
 
         <div className="relative mx-auto max-w-7xl px-6 lg:px-8 text-center">
-          <p className="text-sm font-semibold uppercase tracking-widest text-primary animate-fade-in-up">
-            Ce que nous faisons
-          </p>
-          <h1 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl animate-fade-in-up">
-            Nos <span className="gradient-text">Services</span>
-          </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-400 animate-fade-in-up">
-            De l&apos;audit strategique a l&apos;implementation, nous vous
-            accompagnons a chaque etape de votre transformation IA.
-          </p>
+          <AnimatedSection>
+            <p className="text-sm font-semibold uppercase tracking-widest text-primary">
+              Ce que nous faisons
+            </p>
+          </AnimatedSection>
+          <AnimatedSection>
+            <h1 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+              Nos <span className="gradient-text">Services</span>
+            </h1>
+          </AnimatedSection>
+          <AnimatedSection>
+            <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-400">
+              De l&apos;audit strategique a l&apos;implementation, nous vous
+              accompagnons a chaque etape de votre transformation IA.
+            </p>
+          </AnimatedSection>
         </div>
       </section>
 
@@ -141,7 +149,7 @@ export default function ServicesPage() {
 
           <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
             <div className={`flex flex-col gap-12 lg:flex-row lg:items-start lg:gap-16 ${index % 2 === 1 ? "lg:flex-row-reverse" : ""}`}>
-              <div className="flex-1">
+              <AnimatedSection direction={index % 2 === 0 ? "left" : "right"} className="flex-1">
                 <div className="flex items-center gap-4">
                   <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-xl font-bold gradient-text glow">
                     0{index + 1}
@@ -163,9 +171,9 @@ export default function ServicesPage() {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </AnimatedSection>
 
-              <div className="flex-1">
+              <AnimatedSection direction={index % 2 === 0 ? "right" : "left"} delay={0.2} className="flex-1">
                 <div className="glass rounded-3xl p-8 lg:p-12">
                   <div className="flex flex-col items-center text-center">
                     <div className="flex h-24 w-24 items-center justify-center rounded-3xl bg-gradient-to-br from-primary/20 to-accent/30 animate-float">
@@ -189,7 +197,7 @@ export default function ServicesPage() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </AnimatedSection>
             </div>
           </div>
         </section>
@@ -213,81 +221,86 @@ export default function ServicesPage() {
             </p>
           </div>
 
-          <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-3">
+          <AnimatedSection stagger staggerDelay={0.15} className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-3">
             {pricingTiers.map((tier) => (
-              <div
+              <AnimatedCard
                 key={tier.name}
-                className={`relative flex flex-col rounded-3xl p-8 transition-all duration-300 hover:-translate-y-1 ${
-                  tier.highlighted
-                    ? "glass glow border-primary/30 ring-1 ring-primary/20"
-                    : "glass hover:glow"
-                }`}
               >
-                {tier.highlighted && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                    <span className="rounded-full bg-primary px-4 py-1.5 text-xs font-semibold text-gray-900">
-                      Recommande
-                    </span>
-                  </div>
-                )}
-
-                <div className="flex-1">
-                  <h3 className={`text-2xl font-bold ${tier.highlighted ? "gradient-text" : "text-white"}`}>
-                    {tier.name}
-                  </h3>
-                  <p className="mt-1 text-sm font-medium text-primary/70">{tier.subtitle}</p>
-                  <p className="mt-4 text-sm leading-6 text-gray-400">{tier.description}</p>
-                  <div className="mt-6 flex items-baseline gap-2">
-                    <span className="text-3xl font-bold text-white">Sur devis</span>
-                  </div>
-
-                  <ul className="mt-8 space-y-3">
-                    {tier.features.map((feature) => (
-                      <li key={feature} className="flex items-start gap-3">
-                        <svg className="mt-0.5 h-5 w-5 flex-shrink-0 text-primary" viewBox="0 0 20 20" fill="none">
-                          <path d="M3 10L8 15L17 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                        <span className="text-sm text-gray-300">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <Link
-                  href="/contact"
-                  className={`mt-10 block w-full rounded-full py-3 text-center text-sm font-semibold transition-all ${
+                <div
+                  className={`relative flex flex-col rounded-3xl p-8 transition-all duration-300 hover:-translate-y-1 ${
                     tier.highlighted
-                      ? "bg-primary text-gray-900 hover:bg-primary-light hover:shadow-lg hover:shadow-primary/20"
-                      : "border border-white/10 text-white hover:border-primary/50 hover:text-primary"
+                      ? "glass glow border-primary/30 ring-1 ring-primary/20"
+                      : "glass hover:glow"
                   }`}
                 >
-                  Demander un devis
-                </Link>
-              </div>
+                  {tier.highlighted && (
+                    <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+                      <span className="rounded-full bg-primary px-4 py-1.5 text-xs font-semibold text-gray-900">
+                        Recommande
+                      </span>
+                    </div>
+                  )}
+
+                  <div className="flex-1">
+                    <h3 className={`text-2xl font-bold ${tier.highlighted ? "gradient-text" : "text-white"}`}>
+                      {tier.name}
+                    </h3>
+                    <p className="mt-1 text-sm font-medium text-primary/70">{tier.subtitle}</p>
+                    <p className="mt-4 text-sm leading-6 text-gray-400">{tier.description}</p>
+                    <div className="mt-6 flex items-baseline gap-2">
+                      <span className="text-3xl font-bold text-white">Sur devis</span>
+                    </div>
+
+                    <ul className="mt-8 space-y-3">
+                      {tier.features.map((feature) => (
+                        <li key={feature} className="flex items-start gap-3">
+                          <svg className="mt-0.5 h-5 w-5 flex-shrink-0 text-primary" viewBox="0 0 20 20" fill="none">
+                            <path d="M3 10L8 15L17 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                          </svg>
+                          <span className="text-sm text-gray-300">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <Link
+                    href="/contact"
+                    className={`mt-10 block w-full rounded-full py-3 text-center text-sm font-semibold transition-all ${
+                      tier.highlighted
+                        ? "bg-primary text-gray-900 hover:bg-primary-light hover:shadow-lg hover:shadow-primary/20"
+                        : "border border-white/10 text-white hover:border-primary/50 hover:text-primary"
+                    }`}
+                  >
+                    Demander un devis
+                  </Link>
+                </div>
+              </AnimatedCard>
             ))}
-          </div>
+          </AnimatedSection>
         </div>
       </section>
 
       {/* CTA */}
       <section className="relative py-24">
         <div className="relative mx-auto max-w-4xl px-6 lg:px-8 text-center">
-          <div className="glass rounded-3xl px-8 py-16 sm:px-16 glow">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              Identifions ensemble vos <span className="gradient-text">opportunites IA</span>
-            </h2>
-            <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-400">
-              Un echange de 30 minutes pour comprendre vos enjeux et vous montrer concretement comment l&apos;IA peut transformer votre quotidien.
-            </p>
-            <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-              <Link href="/contact" className="rounded-full bg-primary px-8 py-3.5 text-sm font-semibold text-gray-900 transition-all hover:bg-primary-light hover:shadow-lg hover:shadow-primary/20">
-                Prendre rendez-vous
-              </Link>
-              <Link href="/about" className="rounded-full border border-white/10 px-8 py-3.5 text-sm font-semibold text-white transition-all hover:border-primary/50 hover:text-primary">
-                En savoir plus sur Optimus
-              </Link>
+          <AnimatedSection>
+            <div className="glass rounded-3xl px-8 py-16 sm:px-16 glow">
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+                Identifions ensemble vos <span className="gradient-text">opportunites IA</span>
+              </h2>
+              <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-400">
+                Un echange de 30 minutes pour comprendre vos enjeux et vous montrer concretement comment l&apos;IA peut transformer votre quotidien.
+              </p>
+              <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+                <Link href="/contact" className="rounded-full bg-primary px-8 py-3.5 text-sm font-semibold text-gray-900 transition-all hover:bg-primary-light hover:shadow-lg hover:shadow-primary/20">
+                  Prendre rendez-vous
+                </Link>
+                <Link href="/about" className="rounded-full border border-white/10 px-8 py-3.5 text-sm font-semibold text-white transition-all hover:border-primary/50 hover:text-primary">
+                  En savoir plus sur Optimus
+                </Link>
+              </div>
             </div>
-          </div>
+          </AnimatedSection>
         </div>
       </section>
     </div>
