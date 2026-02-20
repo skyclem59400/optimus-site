@@ -128,7 +128,7 @@ export default function ServicesPage() {
             </h1>
           </AnimatedSection>
           <AnimatedSection>
-            <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-400">
+            <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-muted">
               De l&apos;audit strategique a l&apos;implementation, nous vous
               accompagnons a chaque etape de votre transformation IA.
             </p>
@@ -158,7 +158,7 @@ export default function ServicesPage() {
                 <h2 className="mt-6 text-3xl font-bold tracking-tight sm:text-4xl">
                   {service.title}
                 </h2>
-                <p className="mt-4 text-lg leading-8 text-gray-400">
+                <p className="mt-4 text-lg leading-8 text-muted">
                   {service.description}
                 </p>
                 <ul className="mt-8 space-y-3">
@@ -167,7 +167,7 @@ export default function ServicesPage() {
                       <svg className="mt-1.5 h-4 w-4 flex-shrink-0 text-primary" viewBox="0 0 16 16" fill="none">
                         <path d="M2 8L6 12L14 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
-                      <span className="text-gray-300">{example}</span>
+                      <span className="text-subtle">{example}</span>
                     </li>
                   ))}
                 </ul>
@@ -182,14 +182,14 @@ export default function ServicesPage() {
                     <h3 className="mt-8 text-xl font-semibold gradient-text">
                       {service.title}
                     </h3>
-                    <p className="mt-3 text-sm text-gray-500">
+                    <p className="mt-3 text-sm text-muted">
                       {service.examples.length} domaines d&apos;expertise
                     </p>
                     <div className="mt-8 flex flex-wrap justify-center gap-2">
                       {service.examples.map((example) => (
                         <span
                           key={example}
-                          className="rounded-full bg-surface-light px-3 py-1 text-xs text-gray-400 border border-white/5"
+                          className="rounded-full bg-surface-light px-3 py-1 text-xs text-muted border border-border"
                         >
                           {example.split(" ").slice(0, 3).join(" ")}...
                         </span>
@@ -216,7 +216,7 @@ export default function ServicesPage() {
             <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">
               Une offre adaptee a <span className="gradient-text">chaque besoin</span>
             </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-400">
+            <p className="mx-auto mt-4 max-w-2xl text-lg text-muted">
               Chaque entreprise est unique. Nos offres s&apos;adaptent a votre maturite, vos objectifs et votre budget.
             </p>
           </div>
@@ -242,13 +242,13 @@ export default function ServicesPage() {
                   )}
 
                   <div className="flex-1">
-                    <h3 className={`text-2xl font-bold ${tier.highlighted ? "gradient-text" : "text-white"}`}>
+                    <h3 className={`text-2xl font-bold ${tier.highlighted ? "gradient-text" : "text-foreground"}`}>
                       {tier.name}
                     </h3>
                     <p className="mt-1 text-sm font-medium text-primary/70">{tier.subtitle}</p>
-                    <p className="mt-4 text-sm leading-6 text-gray-400">{tier.description}</p>
+                    <p className="mt-4 text-sm leading-6 text-muted">{tier.description}</p>
                     <div className="mt-6 flex items-baseline gap-2">
-                      <span className="text-3xl font-bold text-white">Sur devis</span>
+                      <span className="text-3xl font-bold text-foreground">Sur devis</span>
                     </div>
 
                     <ul className="mt-8 space-y-3">
@@ -257,7 +257,7 @@ export default function ServicesPage() {
                           <svg className="mt-0.5 h-5 w-5 flex-shrink-0 text-primary" viewBox="0 0 20 20" fill="none">
                             <path d="M3 10L8 15L17 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                           </svg>
-                          <span className="text-sm text-gray-300">{feature}</span>
+                          <span className="text-sm text-subtle">{feature}</span>
                         </li>
                       ))}
                     </ul>
@@ -268,7 +268,7 @@ export default function ServicesPage() {
                     className={`mt-10 block w-full rounded-full py-3 text-center text-sm font-semibold transition-all ${
                       tier.highlighted
                         ? "bg-primary text-gray-900 hover:bg-primary-light hover:shadow-lg hover:shadow-primary/20"
-                        : "border border-white/10 text-white hover:border-primary/50 hover:text-primary"
+                        : "border border-border text-foreground hover:border-primary/50 hover:text-primary"
                     }`}
                   >
                     Demander un devis
@@ -288,14 +288,14 @@ export default function ServicesPage() {
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
                 Identifions ensemble vos <span className="gradient-text">opportunites IA</span>
               </h2>
-              <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-400">
+              <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-muted">
                 Un echange de 30 minutes pour comprendre vos enjeux et vous montrer concretement comment l&apos;IA peut transformer votre quotidien.
               </p>
               <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
                 <Link href="/contact" className="rounded-full bg-primary px-8 py-3.5 text-sm font-semibold text-gray-900 transition-all hover:bg-primary-light hover:shadow-lg hover:shadow-primary/20">
                   Prendre rendez-vous
                 </Link>
-                <Link href="/about" className="rounded-full border border-white/10 px-8 py-3.5 text-sm font-semibold text-white transition-all hover:border-primary/50 hover:text-primary">
+                <Link href="/about" className="rounded-full border border-border px-8 py-3.5 text-sm font-semibold text-foreground transition-all hover:border-primary/50 hover:text-primary">
                   En savoir plus sur Optimus
                 </Link>
               </div>

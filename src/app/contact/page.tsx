@@ -49,7 +49,7 @@ export default function ContactPage() {
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
               <span className="gradient-text">Parlons de votre projet</span>
             </h1>
-            <p className="mt-6 mx-auto max-w-2xl text-lg leading-8 text-gray-400">
+            <p className="mt-6 mx-auto max-w-2xl text-lg leading-8 text-muted">
               Une question, un projet, une idee ? Prenons le temps d&apos;en discuter et de definir ensemble la meilleure strategie IA pour votre entreprise.
             </p>
           </AnimatedSection>
@@ -62,7 +62,7 @@ export default function ContactPage() {
           {/* Left column - Info */}
           <div className="flex flex-col gap-8">
             <AnimatedSection delay={0}>
-              <p className="text-base leading-7 text-gray-300">
+              <p className="text-base leading-7 text-subtle">
                 Chaque projet est unique. Discutons de vos besoins et trouvons ensemble la meilleure approche pour integrer l&apos;IA dans votre entreprise.
               </p>
             </AnimatedSection>
@@ -77,7 +77,7 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-sm font-semibold text-white">Email</h3>
+                    <h3 className="text-sm font-semibold text-foreground">Email</h3>
                     <a href="mailto:contact@optimus-ia.fr" className="mt-1 block text-sm text-primary transition-colors hover:text-primary-light">
                       contact@optimus-ia.fr
                     </a>
@@ -96,8 +96,8 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-sm font-semibold text-white">Telephone</h3>
-                    <p className="mt-1 text-sm text-gray-400">Sur rendez-vous</p>
+                    <h3 className="text-sm font-semibold text-foreground">Telephone</h3>
+                    <p className="mt-1 text-sm text-muted">Sur rendez-vous</p>
                   </div>
                 </div>
               </div>
@@ -114,8 +114,8 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-sm font-semibold text-white">Localisation</h3>
-                    <p className="mt-1 text-sm text-gray-400">France &mdash; interventions nationales et remote</p>
+                    <h3 className="text-sm font-semibold text-foreground">Localisation</h3>
+                    <p className="mt-1 text-sm text-muted">France &mdash; interventions nationales et remote</p>
                   </div>
                 </div>
               </div>
@@ -130,8 +130,8 @@ export default function ContactPage() {
                   </svg>
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-white">Reponse rapide</p>
-                  <p className="text-xs text-gray-400">Je reponds generalement sous 24h</p>
+                  <p className="text-sm font-medium text-foreground">Reponse rapide</p>
+                  <p className="text-xs text-muted">Je reponds generalement sous 24h</p>
                 </div>
               </div>
             </AnimatedSection>
@@ -147,40 +147,40 @@ export default function ContactPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                     </svg>
                   </div>
-                  <h3 className="mt-6 text-xl font-semibold text-white">Message envoye !</h3>
-                  <p className="mt-2 text-sm text-gray-400">Merci pour votre message. Je vous repondrai dans les plus brefs delais.</p>
+                  <h3 className="mt-6 text-xl font-semibold text-foreground">Message envoye !</h3>
+                  <p className="mt-2 text-sm text-muted">Merci pour votre message. Je vous repondrai dans les plus brefs delais.</p>
                   <button type="button" onClick={() => setFormSubmitted(false)} className="mt-8 text-sm font-medium text-primary transition-colors hover:text-primary-light">
                     Envoyer un autre message
                   </button>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="flex flex-col gap-6">
-                  <h2 className="text-xl font-semibold text-white">Envoyez-moi un message</h2>
+                  <h2 className="text-xl font-semibold text-foreground">Envoyez-moi un message</h2>
 
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-300">
+                    <label htmlFor="name" className="block text-sm font-medium text-subtle">
                       Nom <span className="text-primary">*</span>
                     </label>
-                    <input type="text" id="name" name="name" required autoComplete="name" placeholder="Votre nom complet" className="mt-2 block w-full rounded-xl border border-white/10 bg-surface px-4 py-3 text-sm text-white placeholder-muted outline-none transition-all focus:border-primary/50 focus:ring-2 focus:ring-primary/20" />
+                    <input type="text" id="name" name="name" required autoComplete="name" placeholder="Votre nom complet" className="mt-2 block w-full rounded-xl border border-border bg-surface px-4 py-3 text-sm text-foreground placeholder-muted outline-none transition-all focus:border-primary/50 focus:ring-2 focus:ring-primary/20" />
                   </div>
 
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-300">
+                    <label htmlFor="email" className="block text-sm font-medium text-subtle">
                       Email <span className="text-primary">*</span>
                     </label>
-                    <input type="email" id="email" name="email" required autoComplete="email" placeholder="vous@entreprise.com" className="mt-2 block w-full rounded-xl border border-white/10 bg-surface px-4 py-3 text-sm text-white placeholder-muted outline-none transition-all focus:border-primary/50 focus:ring-2 focus:ring-primary/20" />
+                    <input type="email" id="email" name="email" required autoComplete="email" placeholder="vous@entreprise.com" className="mt-2 block w-full rounded-xl border border-border bg-surface px-4 py-3 text-sm text-foreground placeholder-muted outline-none transition-all focus:border-primary/50 focus:ring-2 focus:ring-primary/20" />
                   </div>
 
                   <div>
-                    <label htmlFor="company" className="block text-sm font-medium text-gray-300">Entreprise</label>
-                    <input type="text" id="company" name="company" autoComplete="organization" placeholder="Nom de votre entreprise" className="mt-2 block w-full rounded-xl border border-white/10 bg-surface px-4 py-3 text-sm text-white placeholder-muted outline-none transition-all focus:border-primary/50 focus:ring-2 focus:ring-primary/20" />
+                    <label htmlFor="company" className="block text-sm font-medium text-subtle">Entreprise</label>
+                    <input type="text" id="company" name="company" autoComplete="organization" placeholder="Nom de votre entreprise" className="mt-2 block w-full rounded-xl border border-border bg-surface px-4 py-3 text-sm text-foreground placeholder-muted outline-none transition-all focus:border-primary/50 focus:ring-2 focus:ring-primary/20" />
                   </div>
 
                   <div>
-                    <label htmlFor="subject" className="block text-sm font-medium text-gray-300">
+                    <label htmlFor="subject" className="block text-sm font-medium text-subtle">
                       Sujet <span className="text-primary">*</span>
                     </label>
-                    <select id="subject" name="subject" required defaultValue="" className="mt-2 block w-full rounded-xl border border-white/10 bg-surface px-4 py-3 text-sm text-white outline-none transition-all focus:border-primary/50 focus:ring-2 focus:ring-primary/20 appearance-none">
+                    <select id="subject" name="subject" required defaultValue="" className="mt-2 block w-full rounded-xl border border-border bg-surface px-4 py-3 text-sm text-foreground outline-none transition-all focus:border-primary/50 focus:ring-2 focus:ring-primary/20 appearance-none">
                       <option value="" disabled className="text-muted">Selectionnez un sujet</option>
                       <option value="automatisation">Automatisation</option>
                       <option value="agents-ia">Agents IA</option>
@@ -191,10 +191,10 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-300">
+                    <label htmlFor="message" className="block text-sm font-medium text-subtle">
                       Message <span className="text-primary">*</span>
                     </label>
-                    <textarea id="message" name="message" required rows={5} placeholder="Decrivez votre projet, vos besoins ou votre question..." className="mt-2 block w-full resize-y rounded-xl border border-white/10 bg-surface px-4 py-3 text-sm text-white placeholder-muted outline-none transition-all focus:border-primary/50 focus:ring-2 focus:ring-primary/20" />
+                    <textarea id="message" name="message" required rows={5} placeholder="Decrivez votre projet, vos besoins ou votre question..." className="mt-2 block w-full resize-y rounded-xl border border-border bg-surface px-4 py-3 text-sm text-foreground placeholder-muted outline-none transition-all focus:border-primary/50 focus:ring-2 focus:ring-primary/20" />
                   </div>
 
                   <button type="submit" className="mt-2 w-full rounded-xl bg-primary px-6 py-3.5 text-sm font-semibold text-gray-900 transition-all hover:bg-primary-light hover:shadow-lg hover:shadow-primary/20">
@@ -208,7 +208,7 @@ export default function ContactPage() {
       </section>
 
       {/* FAQ */}
-      <section className="border-t border-white/5 bg-surface/50">
+      <section className="border-t border-border bg-surface/50">
         <div className="mx-auto max-w-3xl px-6 py-24 lg:px-8">
           <AnimatedSection>
             <div className="text-center mb-12">
@@ -225,7 +225,7 @@ export default function ContactPage() {
                   <button
                     type="button"
                     onClick={() => setOpenFaq(openFaq === index ? null : index)}
-                    className="flex w-full cursor-pointer items-center justify-between px-6 py-5 text-sm font-medium text-white transition-colors hover:text-primary text-left"
+                    className="flex w-full cursor-pointer items-center justify-between px-6 py-5 text-sm font-medium text-foreground transition-colors hover:text-primary text-left"
                   >
                     <span>{faq.q}</span>
                     <motion.svg
@@ -250,7 +250,7 @@ export default function ContactPage() {
                         transition={{ duration: 0.3, ease: [0.21, 0.47, 0.32, 0.98] }}
                         className="overflow-hidden"
                       >
-                        <div className="px-6 pb-5 text-sm leading-7 text-gray-400">
+                        <div className="px-6 pb-5 text-sm leading-7 text-muted">
                           {faq.a}
                         </div>
                       </motion.div>

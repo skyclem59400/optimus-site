@@ -38,7 +38,7 @@ export default function Home() {
               entreprise
             </h1>
 
-            <p className="mt-8 text-lg sm:text-xl leading-relaxed text-gray-400 max-w-2xl">
+            <p className="mt-8 text-lg sm:text-xl leading-relaxed text-muted max-w-2xl">
               Automatisation, agents IA, workflows intelligents &mdash; nous
               transformons votre business avec les dernieres avancees en IA.
             </p>
@@ -55,7 +55,7 @@ export default function Home() {
               </Link>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center rounded-full border border-white/10 px-8 py-3.5 text-base font-semibold text-gray-200 transition-all hover:border-primary/30 hover:text-primary hover:bg-primary/5"
+                className="inline-flex items-center justify-center rounded-full border border-border px-8 py-3.5 text-base font-semibold text-foreground transition-all hover:border-primary/30 hover:text-primary hover:bg-primary/5"
               >
                 Nous contacter
               </Link>
@@ -255,7 +255,7 @@ export default function Home() {
             ].map((step) => (
               <AnimatedCard key={step.num} className="relative group" tiltIntensity={8}>
                 <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
-                  <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-surface-light border border-white/5 text-2xl font-bold gradient-text transition-all group-hover:border-primary/20 glow">
+                  <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-surface-light border border-border text-2xl font-bold gradient-text transition-all group-hover:border-primary/20 glow">
                     {step.num}
                   </div>
                   <h3 className="text-lg font-semibold mb-2">{step.title}</h3>
@@ -271,7 +271,7 @@ export default function Home() {
       <section className="py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <AnimatedSection>
-            <div className="relative overflow-hidden rounded-3xl bg-surface-light border border-white/5">
+            <div className="relative overflow-hidden rounded-3xl bg-surface-light border border-border">
               <div className="absolute inset-0 -z-0">
                 <div className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-primary/10 blur-[100px]" />
                 <div className="absolute -bottom-24 -left-24 w-64 h-64 rounded-full bg-accent-light/15 blur-[80px]" />
@@ -282,7 +282,7 @@ export default function Home() {
                   Pret a transformer{" "}
                   <span className="gradient-text">votre entreprise</span> ?
                 </h2>
-                <p className="mt-6 text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
+                <p className="mt-6 text-lg text-muted max-w-2xl mx-auto leading-relaxed">
                   Discutons de vos enjeux et decouvrez comment l&apos;IA peut
                   concretement accelerer votre activite. Premier echange sans engagement.
                 </p>
@@ -298,7 +298,7 @@ export default function Home() {
                   </Link>
                   <Link
                     href="/services"
-                    className="inline-flex items-center justify-center rounded-full border border-white/10 px-8 py-4 text-base font-semibold text-gray-200 transition-all hover:border-primary/30 hover:text-primary hover:bg-primary/5"
+                    className="inline-flex items-center justify-center rounded-full border border-border px-8 py-4 text-base font-semibold text-foreground transition-all hover:border-primary/30 hover:text-primary hover:bg-primary/5"
                   >
                     Voir nos services
                   </Link>

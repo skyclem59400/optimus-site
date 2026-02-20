@@ -17,7 +17,7 @@ const footerLinks = {
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/5 bg-surface">
+    <footer className="border-t border-border bg-surface">
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-4">
           {/* Brand */}
@@ -32,13 +32,13 @@ export default function Footer() {
               />
               <span className="text-lg font-bold gradient-text">Optimus</span>
             </Link>
-            <p className="mt-4 max-w-md text-sm leading-6 text-gray-400">
+            <p className="mt-4 max-w-md text-sm leading-6 text-muted">
               Nous accompagnons les entreprises dans leur transformation par
               l&apos;intelligence artificielle. De la strategie a
               l&apos;implementation, nous rendons l&apos;IA accessible et
               performante.
             </p>
-            <p className="mt-4 text-sm text-gray-500">
+            <p className="mt-4 text-sm text-muted">
               Clement Scailteux - Consultant IA
             </p>
           </div>
@@ -51,7 +51,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-sm text-gray-400 transition-colors hover:text-white"
+                    className="text-sm text-muted transition-colors hover:text-foreground"
                   >
                     {link.name}
                   </Link>
@@ -68,7 +68,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-sm text-gray-400 transition-colors hover:text-white"
+                    className="text-sm text-muted transition-colors hover:text-foreground"
                   >
                     {link.name}
                   </Link>
@@ -78,11 +78,11 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-white/5 pt-8 flex flex-col md:flex-row md:items-center md:justify-between">
-          <p className="text-xs text-gray-500">
+        <div className="mt-12 border-t border-border pt-8 flex flex-col md:flex-row md:items-center md:justify-between">
+          <p className="text-xs text-muted">
             &copy; {new Date().getFullYear()} Optimus. Tous droits reserves.
           </p>
-          <p className="mt-2 md:mt-0 text-xs text-gray-600">
+          <p className="mt-2 md:mt-0 text-xs text-muted">
             Propulse par l&apos;intelligence artificielle
           </p>
         </div>

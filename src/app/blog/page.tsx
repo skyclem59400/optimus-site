@@ -92,7 +92,7 @@ export default function BlogPage() {
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
               Blog & <span className="gradient-text">Ressources</span>
             </h1>
-            <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-400">
+            <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-muted">
               Insights, guides et actualites sur l&apos;IA en entreprise.
             </p>
           </AnimatedSection>
@@ -104,7 +104,7 @@ export default function BlogPage() {
         <div className="mx-auto max-w-7xl">
           <AnimatedSection>
             <Link href={featuredArticle.href} className="group block">
-              <article className="relative overflow-hidden rounded-2xl border border-white/5 bg-gradient-to-br from-accent/40 via-surface to-surface-light p-8 sm:p-12 transition-all duration-300 hover:border-primary/20 hover:shadow-lg hover:shadow-primary/5">
+              <article className="relative overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-accent/40 via-surface to-surface-light p-8 sm:p-12 transition-all duration-300 hover:border-primary/20 hover:shadow-lg hover:shadow-primary/5">
                 <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/5 to-transparent pointer-events-none" />
                 <div className="relative max-w-2xl">
                   <div className="flex items-center gap-4 mb-6">
@@ -119,7 +119,7 @@ export default function BlogPage() {
                   <h2 className="text-2xl font-bold tracking-tight sm:text-3xl lg:text-4xl text-foreground group-hover:text-primary transition-colors duration-300">
                     {featuredArticle.title}
                   </h2>
-                  <p className="mt-4 text-base leading-7 text-gray-400 sm:text-lg">
+                  <p className="mt-4 text-base leading-7 text-muted sm:text-lg">
                     {featuredArticle.description}
                   </p>
                   <div className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-primary group-hover:gap-3 transition-all duration-300">
@@ -143,7 +143,7 @@ export default function BlogPage() {
             {articles.map((article) => (
               <AnimatedCard key={article.title}>
                 <Link href={article.href} className="group block">
-                  <article className="flex h-full flex-col rounded-xl border border-white/5 bg-surface-light/50 p-6 transition-all duration-300 hover:border-primary/20 hover:bg-surface-light hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-1">
+                  <article className="flex h-full flex-col rounded-xl border border-border bg-surface-light/50 p-6 transition-all duration-300 hover:border-primary/20 hover:bg-surface-light hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-1">
                     <div className="flex items-center justify-between mb-4">
                       <span className={`inline-flex items-center rounded-full border px-3 py-1 text-xs font-medium ${tagColors[article.tag]}`}>
                         {article.tag}
@@ -153,7 +153,7 @@ export default function BlogPage() {
                     <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors duration-300 leading-snug">
                       {article.title}
                     </h3>
-                    <p className="mt-3 flex-1 text-sm leading-6 text-gray-400">
+                    <p className="mt-3 flex-1 text-sm leading-6 text-muted">
                       {article.description}
                     </p>
                     <div className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-primary opacity-0 group-hover:opacity-100 transition-all duration-300">
@@ -183,14 +183,14 @@ export default function BlogPage() {
                 <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
                   Restez informe des dernieres <span className="gradient-text">avancees IA</span>
                 </h2>
-                <p className="mt-4 text-gray-400">
+                <p className="mt-4 text-muted">
                   Recevez nos meilleurs articles et guides pratiques directement dans votre boite mail.
                 </p>
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
                   <input
                     type="email"
                     placeholder="votre@email.com"
-                    className="flex-1 rounded-full border border-white/10 bg-surface px-5 py-3 text-sm text-foreground placeholder:text-muted outline-none transition-all duration-300 focus:border-primary/50 focus:ring-2 focus:ring-primary/20"
+                    className="flex-1 rounded-full border border-border bg-surface px-5 py-3 text-sm text-foreground placeholder:text-muted outline-none transition-all duration-300 focus:border-primary/50 focus:ring-2 focus:ring-primary/20"
                     aria-label="Adresse email"
                   />
                   <button

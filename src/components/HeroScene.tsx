@@ -2,15 +2,18 @@
 
 import { useRef, useMemo, useEffect, useCallback } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
+import { useTheme } from "next-themes";
 import * as THREE from "three";
 
 const NODE_COUNT_DESKTOP = 60;
 const NODE_COUNT_MOBILE = 30;
 const CONNECTION_DISTANCE = 2.5;
 const PRIMARY_COLOR = new THREE.Color("#2dd4bf");
-const DIM_COLOR = new THREE.Color("#0d3d56");
+const DIM_COLOR_DARK = new THREE.Color("#0d3d56");
+const DIM_COLOR_LIGHT = new THREE.Color("#a0d4e6");
 
-function NeuralNetwork({ isMobile }: { isMobile: boolean }) {
+function NeuralNetwork({ isMobile, isDark }: { isMobile: boolean; isDark: boolean }) {
+  const dimColor = isDark ? DIM_COLOR_DARK : DIM_COLOR_LIGHT;
   const nodeCount = isMobile ? NODE_COUNT_MOBILE : NODE_COUNT_DESKTOP;
   const pointsRef = useRef<THREE.Points>(null);
   const linesRef = useRef<THREE.LineSegments>(null);
@@ -91,7 +94,7 @@ function NeuralNetwork({ isMobile }: { isMobile: boolean }) {
             posArray[j * 3 + 1],
             posArray[j * 3 + 2]
           );
-          const c = DIM_COLOR.clone().lerp(PRIMARY_COLOR, alpha * 0.6);
+          const c = dimColor.clone().lerp(PRIMARY_COLOR, alpha * 0.6);
           lineColors.push(c.r, c.g, c.b, c.r, c.g, c.b);
         }
       }
@@ -147,6 +150,8 @@ function NeuralNetwork({ isMobile }: { isMobile: boolean }) {
 export default function HeroScene() {
   const isMobile =
     typeof window !== "undefined" && window.innerWidth < 768;
+  const { theme } = useTheme();
+  const isDark = theme !== "light";
 
   return (
     <div className="absolute inset-0" style={{ zIndex: -5 }}>
@@ -160,7 +165,7 @@ export default function HeroScene() {
         }}
         style={{ background: "transparent" }}
       >
-        <NeuralNetwork isMobile={isMobile} />
+        <NeuralNetwork isMobile={isMobile} isDark={isDark} />
       </Canvas>
     </div>
   );
