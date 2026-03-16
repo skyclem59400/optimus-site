@@ -8,9 +8,9 @@ import { motion, useScroll, useSpring } from "motion/react";
 
 const navigation = [
   { name: "Accueil", href: "/" },
-  { name: "Services", href: "/services" },
-  { name: "A propos", href: "/about" },
-  { name: "Blog", href: "/blog" },
+  { name: "Nos offres", href: "/services" },
+  { name: "Qui sommes-nous", href: "/about" },
+  { name: "Conseils", href: "/blog" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -98,7 +98,7 @@ export default function Header() {
             href="/contact"
             className="rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-gray-900 transition-all hover:bg-primary-light hover:shadow-lg hover:shadow-primary/20"
           >
-            Parlons de votre projet
+            On en discute ?
           </Link>
         </div>
 
@@ -143,7 +143,7 @@ export default function Header() {
               className="mt-4 block rounded-full bg-primary px-5 py-2.5 text-center text-sm font-semibold text-gray-900"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Parlons de votre projet
+              On en discute ?
             </Link>
           </div>
         </div>

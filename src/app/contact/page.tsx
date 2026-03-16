@@ -7,24 +7,24 @@ import AnimatedCard from "@/components/AnimatedCard";
 
 const faqs = [
   {
-    q: "Combien coute une mission type ?",
-    a: "Chaque projet est unique, c'est pourquoi je propose un devis gratuit et personnalise apres un premier echange. Le tarif depend de la complexite, de la duree et du perimetre de la mission.",
+    q: "Ca coute combien ?",
+    a: "Ca depend de votre projet, mais on est transparent sur les prix. Un site + CRM demarre a 3 000\u20AC. Maintenance a partir de 199\u20AC/mois. On fait toujours un devis gratuit avant de commencer.",
   },
   {
-    q: "Combien de temps dure une implementation ?",
-    a: "De quelques jours pour une automatisation simple a plusieurs mois pour une transformation complete. Lors de notre premier echange, je vous donnerai une estimation precise.",
+    q: "C'est long a mettre en place ?",
+    a: "En general, quelques semaines. Pour un site + CRM basique, comptez 2-3 semaines. Pour quelque chose de plus complexe, 1 a 2 mois. On vous donne un calendrier precis des le depart.",
   },
   {
-    q: "Travaillez-vous avec des PME ?",
-    a: "Absolument. L'IA est accessible a toutes les tailles d'entreprise. Je propose des solutions adaptees au budget et aux besoins des PME comme des grandes organisations.",
+    q: "Je n'y connais rien en tech, c'est un probleme ?",
+    a: "Pas du tout, c'est meme fait pour ca ! On s'occupe de toute la technique. Vous, vous avez juste besoin de nous decrire votre activite et vos besoins.",
   },
   {
-    q: "Faut-il des competences techniques en interne ?",
-    a: "Non, ce n'est pas necessaire. Nous adaptons nos solutions a votre niveau technique et formons vos equipes pour une prise en main autonome.",
+    q: "Et apres la livraison, je suis seul ?",
+    a: "Jamais. L'abonnement mensuel inclut la maintenance, les mises a jour et le support. Et si vous avez besoin de faire evoluer vos outils, on est la.",
   },
   {
-    q: "Comment se deroule un premier echange ?",
-    a: "Un appel decouverte de 30 minutes, gratuit et sans engagement. Nous discutons de vos enjeux, j'evalue les opportunites IA et je vous propose une feuille de route claire.",
+    q: "Comment ca se passe concretement ?",
+    a: "On commence par un appel de 30 minutes (gratuit). Je decouvre votre activite, on identifie vos besoins, et je vous propose une solution adaptee avec un devis clair. Zero engagement.",
   },
 ];
 
@@ -47,10 +47,10 @@ export default function ContactPage() {
         <div className="relative mx-auto max-w-7xl text-center">
           <AnimatedSection>
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-              <span className="gradient-text">Parlons de votre projet</span>
+              Envie d&apos;en <span className="gradient-text">discuter</span> ?
             </h1>
             <p className="mt-6 mx-auto max-w-2xl text-lg leading-8 text-muted">
-              Une question, un projet, une idee ? Prenons le temps d&apos;en discuter et de definir ensemble la meilleure strategie IA pour votre entreprise.
+              Pas de formulaire a rallonge. Dites-nous en quelques mots ce que vous cherchez, et on revient vers vous sous 24h.
             </p>
           </AnimatedSection>
         </div>
@@ -63,7 +63,7 @@ export default function ContactPage() {
           <div className="flex flex-col gap-8">
             <AnimatedSection delay={0}>
               <p className="text-base leading-7 text-subtle">
-                Chaque projet est unique. Discutons de vos besoins et trouvons ensemble la meilleure approche pour integrer l&apos;IA dans votre entreprise.
+                Que vous ayez un projet precis ou juste une question, on est la. Pas de commercial, pas de script &mdash; juste Clement qui vous repond.
               </p>
             </AnimatedSection>
 
@@ -96,7 +96,7 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-sm font-semibold text-foreground">Telephone</h3>
+                    <h3 className="text-sm font-semibold text-foreground">Un appel ? Avec plaisir</h3>
                     <p className="mt-1 text-sm text-muted">Sur rendez-vous</p>
                   </div>
                 </div>
@@ -115,7 +115,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="text-sm font-semibold text-foreground">Localisation</h3>
-                    <p className="mt-1 text-sm text-muted">France &mdash; interventions nationales et remote</p>
+                    <p className="mt-1 text-sm text-muted">Base dans les Hauts-de-France, disponible partout en France et en remote</p>
                   </div>
                 </div>
               </div>
@@ -130,8 +130,8 @@ export default function ContactPage() {
                   </svg>
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-foreground">Reponse rapide</p>
-                  <p className="text-xs text-muted">Je reponds generalement sous 24h</p>
+                  <p className="text-sm font-medium text-foreground">Reponse sous 24h</p>
+                  <p className="text-xs text-muted">Souvent plus rapide, promis</p>
                 </div>
               </div>
             </AnimatedSection>
@@ -147,15 +147,15 @@ export default function ContactPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                     </svg>
                   </div>
-                  <h3 className="mt-6 text-xl font-semibold text-foreground">Message envoye !</h3>
-                  <p className="mt-2 text-sm text-muted">Merci pour votre message. Je vous repondrai dans les plus brefs delais.</p>
+                  <h3 className="mt-6 text-xl font-semibold text-foreground">C&apos;est envoye !</h3>
+                  <p className="mt-2 text-sm text-muted">Merci pour votre message ! Je vous recontacte tres vite. En attendant, vous pouvez regarder ce qu&apos;on propose.</p>
                   <button type="button" onClick={() => setFormSubmitted(false)} className="mt-8 text-sm font-medium text-primary transition-colors hover:text-primary-light">
                     Envoyer un autre message
                   </button>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="flex flex-col gap-6">
-                  <h2 className="text-xl font-semibold text-foreground">Envoyez-moi un message</h2>
+                  <h2 className="text-xl font-semibold text-foreground">Ecrivez-moi</h2>
 
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-subtle">
@@ -178,27 +178,20 @@ export default function ContactPage() {
 
                   <div>
                     <label htmlFor="subject" className="block text-sm font-medium text-subtle">
-                      Sujet <span className="text-primary">*</span>
+                      En une phrase, qu&apos;est-ce qui vous amenerait ? <span className="text-primary">*</span>
                     </label>
-                    <select id="subject" name="subject" required defaultValue="" className="mt-2 block w-full rounded-xl border border-border bg-surface px-4 py-3 text-sm text-foreground outline-none transition-all focus:border-primary/50 focus:ring-2 focus:ring-primary/20 appearance-none">
-                      <option value="" disabled className="text-muted">Selectionnez un sujet</option>
-                      <option value="automatisation">Automatisation</option>
-                      <option value="agents-ia">Agents IA</option>
-                      <option value="audit-ia">Audit IA</option>
-                      <option value="formation">Formation</option>
-                      <option value="autre">Autre</option>
-                    </select>
+                    <input type="text" id="subject" name="subject" required placeholder="Ex : Je cherche un site web pour mon commerce" className="mt-2 block w-full rounded-xl border border-border bg-surface px-4 py-3 text-sm text-foreground placeholder-muted outline-none transition-all focus:border-primary/50 focus:ring-2 focus:ring-primary/20" />
                   </div>
 
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-subtle">
                       Message <span className="text-primary">*</span>
                     </label>
-                    <textarea id="message" name="message" required rows={5} placeholder="Decrivez votre projet, vos besoins ou votre question..." className="mt-2 block w-full resize-y rounded-xl border border-border bg-surface px-4 py-3 text-sm text-foreground placeholder-muted outline-none transition-all focus:border-primary/50 focus:ring-2 focus:ring-primary/20" />
+                    <textarea id="message" name="message" required rows={5} placeholder="Racontez-moi votre situation, vos besoins, ou posez-moi simplement une question..." className="mt-2 block w-full resize-y rounded-xl border border-border bg-surface px-4 py-3 text-sm text-foreground placeholder-muted outline-none transition-all focus:border-primary/50 focus:ring-2 focus:ring-primary/20" />
                   </div>
 
                   <button type="submit" className="mt-2 w-full rounded-xl bg-primary px-6 py-3.5 text-sm font-semibold text-gray-900 transition-all hover:bg-primary-light hover:shadow-lg hover:shadow-primary/20">
-                    Envoyer le message
+                    Envoyer
                   </button>
                 </form>
               )}

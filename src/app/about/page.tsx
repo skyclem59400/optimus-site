@@ -4,16 +4,16 @@ import AnimatedSection, { AnimatedItem } from "@/components/AnimatedSection";
 import AnimatedCard from "@/components/AnimatedCard";
 
 export const metadata: Metadata = {
-  title: "A propos | Optimus - Integration IA en Entreprise",
+  title: "Qui sommes-nous | Optimus — Le digital accessible",
   description:
-    "Decouvrez Optimus, cabinet de consulting en integration IA fonde par Clement Scailteux. Pragmatisme, excellence technique et innovation.",
+    "Optimus, c'est Clement Scailteux, developpeur et consultant qui aide les entrepreneurs a se digitaliser simplement.",
 };
 
 const values = [
   {
-    title: "Pragmatisme",
+    title: "Du concret, pas du vent",
     description:
-      "Des solutions concretes qui generent des resultats mesurables. Pas de buzzwords, pas de promesses creuses - uniquement des implementations qui fonctionnent.",
+      "On ne vend pas du reve. Chaque solution est testee, deployee et mesuree. Vous savez exactement ce que vous obtenez.",
     icon: (
       <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085" />
@@ -21,9 +21,9 @@ const values = [
     ),
   },
   {
-    title: "Excellence technique",
+    title: "La simplicite avant tout",
     description:
-      "Les meilleurs outils, les meilleures pratiques. Chaque solution est construite avec rigueur, testee et optimisee pour une performance maximale.",
+      "Si c'est complique, c'est qu'on a rate quelque chose. Vos outils doivent etre aussi simples a utiliser qu'un smartphone.",
     icon: (
       <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z" />
@@ -31,9 +31,9 @@ const values = [
     ),
   },
   {
-    title: "Transparence",
+    title: "On ne vous lache pas",
     description:
-      "Communication claire a chaque etape. Vous comprenez ce qui est construit, pourquoi, et comment. Pas de boite noire, pas de dependance artificielle.",
+      "Livrer un outil et disparaitre ? Tres peu pour nous. On vous forme, on reste disponible, et on fait evoluer vos outils avec vous.",
     icon: (
       <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
@@ -42,29 +42,15 @@ const values = [
     ),
   },
   {
-    title: "Innovation",
+    title: "Des prix honnetes",
     description:
-      "Toujours a la pointe des avancees en intelligence artificielle. Veille permanente, experimentation continue, pour vous offrir ce qui se fait de mieux.",
+      "Pas de devis a rallonge ni de couts caches. On vous dit combien ca coute avant de commencer, et on s'y tient.",
     icon: (
       <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
       </svg>
     ),
   },
-];
-
-const technologies = [
-  { name: "Claude / Anthropic", category: "LLM" },
-  { name: "OpenAI / GPT", category: "LLM" },
-  { name: "Claude Code", category: "Dev" },
-  { name: "n8n", category: "Automation" },
-  { name: "Next.js", category: "Dev" },
-  { name: "TypeScript", category: "Dev" },
-  { name: "Python", category: "Dev" },
-  { name: "LangChain", category: "AI Framework" },
-  { name: "Systemes agentiques", category: "AI Framework" },
-  { name: "RAG", category: "AI Framework" },
-  { name: "API Integration", category: "Workflow" },
 ];
 
 export default function AboutPage() {
@@ -78,18 +64,18 @@ export default function AboutPage() {
         </div>
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <AnimatedSection className="mx-auto max-w-3xl text-center">
-            <p className="text-sm font-semibold uppercase tracking-widest text-primary">A propos</p>
+            <p className="text-sm font-semibold uppercase tracking-widest text-primary">Qui sommes-nous</p>
             <h1 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-              A propos d&apos;<span className="gradient-text">Optimus</span>
+              On rend le digital <span className="gradient-text">simple</span> pour ceux qui font tourner la France
             </h1>
             <p className="mt-6 text-lg leading-8 text-muted sm:text-xl">
-              Rendre l&apos;intelligence artificielle accessible, concrete et performante pour les entreprises qui veulent prendre une longueur d&apos;avance.
+              Artisans, commercants, freelances, PME — vous meritez des outils aussi performants que ceux des grandes entreprises. Sans la complexite ni le prix.
             </p>
           </AnimatedSection>
         </div>
       </section>
 
-      {/* Vision */}
+      {/* L'histoire */}
       <section className="py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <AnimatedSection>
@@ -98,17 +84,17 @@ export default function AboutPage() {
               <div className="absolute bottom-0 right-0 h-24 w-24 rounded-br-2xl border-b-2 border-r-2 border-primary/40" />
 
               <h2 className="text-2xl font-bold tracking-tight sm:text-3xl lg:text-4xl">
-                L&apos;IA n&apos;est plus une option, <span className="gradient-text">c&apos;est un avantage strategique.</span>
+                L&apos;histoire
               </h2>
               <div className="mt-8 space-y-6 text-muted leading-7 sm:text-lg">
-                <p>
-                  L&apos;intelligence artificielle transforme profondement la maniere dont les entreprises operent. Celles qui l&apos;adoptent aujourd&apos;hui gagnent en productivite, en precision et en agilite.
+                <p className="text-xl italic text-foreground/90 sm:text-2xl">
+                  &ldquo;J&apos;ai cree Optimus apres un constat simple : les entrepreneurs que je rencontrais avaient tous les memes problemes. Trop d&apos;outils, pas assez de temps, et un digital qui leur semblait inaccessible.&rdquo;
                 </p>
                 <p>
-                  <strong className="text-foreground">Optimus</strong> est ne d&apos;un constat simple : la plupart des entreprises savent que l&apos;IA est importante, mais peu savent par ou commencer ou comment l&apos;integrer efficacement.
+                  Pourtant, les solutions existent. Un bon site, un CRM bien pense, quelques automatisations — et tout change. Le probleme, c&apos;est que la plupart des prestataires parlent un langage incomprehensible et facturent des fortunes.
                 </p>
                 <p>
-                  Notre mission est de combler ce fosse. Nous traduisons le potentiel de l&apos;IA en solutions concretes, deployees et fonctionnelles, qui generent de la valeur des le premier jour.
+                  <strong className="text-foreground">Optimus</strong>, c&apos;est l&apos;inverse. On parle votre langue, on s&apos;adapte a votre rythme, et on vous livre des outils qui marchent. Pas d&apos;usine a gaz, pas de buzzwords — juste du concret.
                 </p>
               </div>
             </div>
@@ -116,12 +102,12 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Fondateur */}
+      {/* Le fondateur */}
       <section className="py-20 lg:py-28 bg-surface/50">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-sm font-semibold uppercase tracking-widest text-primary">Le fondateur</p>
-            <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">Un consultant, une vision</h2>
+            <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">La personne derriere Optimus</h2>
           </div>
 
           <div className="mt-16 flex flex-col items-center gap-12 lg:flex-row lg:items-start lg:gap-16">
@@ -136,22 +122,22 @@ export default function AboutPage() {
 
             <AnimatedSection direction="right" delay={0.15} className="flex-1 text-center lg:text-left">
               <h3 className="text-2xl font-bold">Clement Scailteux</h3>
-              <p className="mt-1 text-primary font-medium">Fondateur &amp; Consultant IA</p>
+              <p className="mt-1 text-primary font-medium">Fondateur d&apos;Optimus</p>
 
               <div className="mt-6 space-y-4 text-muted leading-7 sm:text-lg">
                 <p>
-                  Consultant informatique avec une solide experience terrain, Clement a fonde Optimus pour repondre a un besoin croissant : aider les entreprises a tirer parti de l&apos;intelligence artificielle de maniere pragmatique et efficace.
+                  Developpeur depuis plus de 10 ans, je me suis specialise dans les solutions sur-mesure pour les entreprises. Mon truc ? Prendre un probleme complexe et le transformer en un outil simple.
                 </p>
                 <p>
-                  Passionne par les technologies IA et leur application concrete en entreprise, il combine expertise technique approfondie et comprehension fine des enjeux business.
+                  J&apos;ai construit des systemes pour des refuges animaliers, des plateformes agricoles, des outils de gestion pour des associations... A chaque fois, le meme plaisir : voir quelqu&apos;un gagner des heures de travail grace a un outil bien pense.
                 </p>
                 <p>
-                  Ses domaines d&apos;expertise couvrent l&apos;automatisation intelligente, les systemes agentiques, la transformation digitale assistee par IA, et le deploiement d&apos;outils IA au sein d&apos;equipes existantes.
+                  Aujourd&apos;hui avec Optimus, je mets cette experience au service des entrepreneurs. L&apos;IA est une opportunite incroyable, et je veux qu&apos;elle profite a tout le monde — pas seulement aux grandes entreprises.
                 </p>
               </div>
 
               <AnimatedSection stagger className="mt-8 flex flex-wrap justify-center gap-3 lg:justify-start">
-                {["Automatisation IA", "Systemes agentiques", "Transformation digitale", "Conseil strategique"].map((skill) => (
+                {["Sites web sur-mesure", "CRM & gestion", "Automatisation IA", "Formation & conseil"].map((skill) => (
                   <AnimatedItem key={skill}>
                     <span className="rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-sm font-medium text-primary">
                       {skill}
@@ -164,12 +150,12 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Valeurs */}
+      {/* Ce qu'on defend */}
       <section className="py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <AnimatedSection className="mx-auto max-w-3xl text-center">
-            <p className="text-sm font-semibold uppercase tracking-widest text-primary">Nos valeurs</p>
-            <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">Ce qui guide chacune de nos interventions</h2>
+            <p className="text-sm font-semibold uppercase tracking-widest text-primary">Nos convictions</p>
+            <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">Ce qu&apos;on defend</h2>
           </AnimatedSection>
 
           <AnimatedSection stagger className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2">
@@ -186,27 +172,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Technologies */}
-      <section className="py-20 lg:py-28 bg-surface/50">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <AnimatedSection className="mx-auto max-w-3xl text-center">
-            <p className="text-sm font-semibold uppercase tracking-widest text-primary">Technologies</p>
-            <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">Les outils que nous maitrisons</h2>
-          </AnimatedSection>
-
-          <AnimatedSection stagger staggerDelay={0.05} className="mt-16 flex flex-wrap justify-center gap-4">
-            {technologies.map((tech) => (
-              <AnimatedItem key={tech.name}>
-                <div className="group rounded-full border border-border bg-surface px-6 py-3 transition-all duration-300 hover:border-primary/30 hover:bg-surface-light">
-                  <span className="text-sm font-medium text-subtle transition-colors group-hover:text-primary">{tech.name}</span>
-                  <span className="ml-2 rounded-full bg-surface-light px-2 py-0.5 text-xs text-muted group-hover:bg-primary/10 group-hover:text-primary/70">{tech.category}</span>
-                </div>
-              </AnimatedItem>
-            ))}
-          </AnimatedSection>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -215,20 +180,20 @@ export default function AboutPage() {
               <div className="absolute top-0 left-1/2 -translate-x-1/2 h-48 w-96 rounded-full bg-primary/10 blur-3xl" />
               <div className="relative">
                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-                  Envie de <span className="gradient-text">collaborer</span> ?
+                  Ca vous <span className="gradient-text">parle</span> ?
                 </h2>
                 <p className="mt-4 text-lg text-muted">
-                  Discutons de votre projet et explorons ensemble comment l&apos;IA peut transformer votre activite.
+                  Prenons 30 minutes pour discuter de votre activite. Pas de commercial, pas de pression — juste une conversation entre humains.
                 </p>
                 <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
                   <Link href="/contact" className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-3.5 text-base font-semibold text-gray-900 transition-all hover:bg-primary-light hover:shadow-lg hover:shadow-primary/20">
-                    Parlons de votre projet
+                    Reservons un appel
                     <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                     </svg>
                   </Link>
                   <Link href="/services" className="inline-flex items-center gap-2 rounded-full border border-border px-8 py-3.5 text-base font-medium text-subtle transition-all hover:border-primary/30 hover:text-primary">
-                    Decouvrir nos services
+                    Decouvrir nos offres
                   </Link>
                 </div>
               </div>

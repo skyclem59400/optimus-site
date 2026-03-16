@@ -3,10 +3,9 @@ import Link from "next/link";
 
 const footerLinks = {
   services: [
-    { name: "Automatisation IA", href: "/services#automatisation" },
-    { name: "Agents Intelligents", href: "/services#agents" },
-    { name: "Audit & Strategie IA", href: "/services#audit" },
-    { name: "Formation", href: "/services#formation" },
+    { name: "Site web + CRM", href: "/services#site-crm" },
+    { name: "Automatisations IA", href: "/services#automatisation" },
+    { name: "Conseil & Formation", href: "/services#accompagnement" },
   ],
   entreprise: [
     { name: "A propos", href: "/about" },
@@ -33,13 +32,11 @@ export default function Footer() {
               <span className="text-lg font-bold gradient-text">Optimus</span>
             </Link>
             <p className="mt-4 max-w-md text-sm leading-6 text-muted">
-              Nous accompagnons les entreprises dans leur transformation par
-              l&apos;intelligence artificielle. De la strategie a
-              l&apos;implementation, nous rendons l&apos;IA accessible et
-              performante.
+              Des solutions digitales sur-mesure pour les entrepreneurs. Site
+              web, CRM, automatisations, IA — on simplifie votre quotidien.
             </p>
             <p className="mt-4 text-sm text-muted">
-              Clement Scailteux - Consultant IA
+              Clement Scailteux — Developpeur & Consultant
             </p>
           </div>
 
@@ -62,7 +59,7 @@ export default function Footer() {
 
           {/* Entreprise */}
           <div>
-            <h3 className="text-sm font-semibold text-primary">Entreprise</h3>
+            <h3 className="text-sm font-semibold text-primary">Optimus</h3>
             <ul className="mt-4 space-y-3">
               {footerLinks.entreprise.map((link) => (
                 <li key={link.name}>
@@ -83,7 +80,7 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Optimus. Tous droits reserves.
           </p>
           <p className="mt-2 md:mt-0 text-xs text-muted">
-            Propulse par l&apos;intelligence artificielle
+            Fait avec passion dans les Hauts-de-France
           </p>
         </div>
       </div>

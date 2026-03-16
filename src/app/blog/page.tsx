@@ -4,79 +4,79 @@ import AnimatedSection from "@/components/AnimatedSection";
 import AnimatedCard from "@/components/AnimatedCard";
 
 export const metadata: Metadata = {
-  title: "Blog & Ressources | Optimus - Integration IA en Entreprise",
+  title: "Conseils & ressources | Optimus — Le digital pour les entrepreneurs",
   description:
-    "Insights, guides et actualites sur l'IA en entreprise. Explorez nos articles pour rester a la pointe de la transformation par l'intelligence artificielle.",
+    "Des articles concrets pour comprendre le digital et l'IA sans jargon. Guides pratiques pour entrepreneurs.",
 };
 
 const featuredArticle = {
-  title: "Comment l'IA revolutionne les PME en 2026",
+  title: "Comment choisir les bons outils digitaux pour son entreprise (sans se ruiner)",
   description:
-    "Decouvrez comment les petites et moyennes entreprises tirent parti de l'intelligence artificielle pour automatiser leurs processus, ameliorer leur productivite et se demarquer face a la concurrence.",
-  date: "15 fevrier 2026",
-  tag: "Strategie IA",
+    "Excel, CRM, site web, automatisation... On fait le tri pour vous. Un guide concret pour savoir par ou commencer sans se perdre dans les options.",
+  date: "12 mars 2026",
+  tag: "Guide pratique",
   href: "#",
 };
 
 const articles = [
   {
-    title: "Les agents IA : au-dela du chatbot",
+    title: "5 taches que vous pouvez automatiser cette semaine",
     description:
-      "Les agents autonomes redefinissent l'automatisation. Decouvrez comment ils prennent des decisions et executent des taches complexes.",
+      "Relances clients, devis, rappels... Ces petites corvees qui vous bouffent du temps ont toutes une solution simple.",
+    date: "8 mars 2026",
+    tag: "Productivite",
+    href: "#",
+  },
+  {
+    title: "Votre site web ne sert a rien ? Voici pourquoi",
+    description:
+      "Avoir un site c'est bien. Avoir un site qui ramene des clients, c'est mieux. Les erreurs les plus courantes et comment les corriger.",
+    date: "3 mars 2026",
+    tag: "Site web",
+    href: "#",
+  },
+  {
+    title: "CRM : pourquoi c'est indispensable (meme si vous etes seul)",
+    description:
+      "Vous gerez vos contacts sur Excel ou dans votre tete ? Il est temps de passer a un outil qui travaille pour vous.",
+    date: "25 fevrier 2026",
+    tag: "CRM",
+    href: "#",
+  },
+  {
+    title: "L'IA pour les PME : on demystifie tout",
+    description:
+      "ChatGPT, automatisation, agents IA... On vous explique ce qui est vraiment utile pour votre business et ce qui est du marketing.",
+    date: "18 fevrier 2026",
+    tag: "IA",
+    href: "#",
+  },
+  {
+    title: "Comment un refuge animalier a gagne 15h par semaine",
+    description:
+      "Retour d'experience : automatisation de la gestion d'un refuge avec 3 etablissements. Les resultats apres 6 mois.",
     date: "10 fevrier 2026",
-    tag: "Technologie",
+    tag: "Temoignage",
     href: "#",
   },
   {
-    title: "5 processus a automatiser des maintenant",
+    title: "Freelance : 3 outils gratuits pour mieux gerer vos clients",
     description:
-      "Identifiez les quick wins : ces processus repetitifs qui, une fois automatises par l'IA, liberent un temps precieux.",
-    date: "5 fevrier 2026",
-    tag: "Automatisation",
-    href: "#",
-  },
-  {
-    title: "Claude Code : le developpement assiste par IA",
-    description:
-      "Retour d'experience sur l'utilisation de Claude Code au quotidien. Gains de productivite et bonnes pratiques.",
-    date: "1 fevrier 2026",
-    tag: "Outils",
-    href: "#",
-  },
-  {
-    title: "ROI de l'IA : comment le mesurer ?",
-    description:
-      "Methodes concretes pour quantifier le retour sur investissement de vos projets IA. KPIs et frameworks de mesure.",
-    date: "25 janvier 2026",
-    tag: "Business",
-    href: "#",
-  },
-  {
-    title: "Preparer ses equipes a l'IA",
-    description:
-      "La technologie ne suffit pas. Decouvrez comment accompagner le changement et creer une culture IA dans votre organisation.",
-    date: "20 janvier 2026",
-    tag: "Formation",
-    href: "#",
-  },
-  {
-    title: "IA generative : opportunites pour votre secteur",
-    description:
-      "De la sante a la finance, en passant par le retail : panorama des applications concretes de l'IA generative par secteur.",
-    date: "15 janvier 2026",
-    tag: "Tendances",
+      "Pas besoin d'investir des mille et des cents. Voici les outils que je recommande pour bien demarrer.",
+    date: "3 fevrier 2026",
+    tag: "Conseil",
     href: "#",
   },
 ];
 
 const tagColors: Record<string, string> = {
-  "Strategie IA": "bg-primary/10 text-primary border-primary/20",
-  Technologie: "bg-blue-500/10 text-blue-400 border-blue-500/20",
-  Automatisation: "bg-purple-500/10 text-purple-400 border-purple-500/20",
-  Outils: "bg-amber-500/10 text-amber-400 border-amber-500/20",
-  Business: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
-  Formation: "bg-rose-500/10 text-rose-400 border-rose-500/20",
-  Tendances: "bg-cyan-500/10 text-cyan-400 border-cyan-500/20",
+  "Guide pratique": "bg-primary/10 text-primary border-primary/20",
+  Productivite: "bg-purple-500/10 text-purple-400 border-purple-500/20",
+  "Site web": "bg-blue-500/10 text-blue-400 border-blue-500/20",
+  CRM: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
+  IA: "bg-amber-500/10 text-amber-400 border-amber-500/20",
+  Temoignage: "bg-rose-500/10 text-rose-400 border-rose-500/20",
+  Conseil: "bg-cyan-500/10 text-cyan-400 border-cyan-500/20",
 };
 
 export default function BlogPage() {
@@ -90,10 +90,10 @@ export default function BlogPage() {
         <div className="relative mx-auto max-w-7xl text-center">
           <AnimatedSection>
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-              Blog & <span className="gradient-text">Ressources</span>
+              Conseils & <span className="gradient-text">ressources</span>
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-muted">
-              Insights, guides et actualites sur l&apos;IA en entreprise.
+              Des articles courts, concrets, sans jargon. Pour comprendre le digital et l&apos;IA a votre rythme.
             </p>
           </AnimatedSection>
         </div>
@@ -181,10 +181,10 @@ export default function BlogPage() {
               </div>
               <div className="relative mx-auto max-w-xl">
                 <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
-                  Restez informe des dernieres <span className="gradient-text">avancees IA</span>
+                  Recevez nos meilleurs <span className="gradient-text">conseils</span>
                 </h2>
                 <p className="mt-4 text-muted">
-                  Recevez nos meilleurs articles et guides pratiques directement dans votre boite mail.
+                  Un email par mois, maximum. Du concret, pas du spam.
                 </p>
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
                   <input
@@ -201,7 +201,7 @@ export default function BlogPage() {
                   </button>
                 </div>
                 <p className="mt-4 text-xs text-muted">
-                  Pas de spam, uniquement du contenu de qualite. Desabonnement en un clic.
+                  Desabonnement en un clic. On respecte votre boite mail.
                 </p>
               </div>
             </div>

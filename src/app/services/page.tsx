@@ -4,106 +4,101 @@ import AnimatedSection from "@/components/AnimatedSection";
 import AnimatedCard from "@/components/AnimatedCard";
 
 export const metadata: Metadata = {
-  title: "Services | Optimus - Integration IA en Entreprise",
+  title: "Nos offres | Optimus — Solutions digitales sur-mesure",
   description:
-    "Decouvrez nos services d'integration IA : automatisation intelligente, agents IA autonomes, audit strategique et formation.",
+    "Site web, CRM, automatisations, IA — des solutions cles-en-main pour les entrepreneurs qui veulent gagner du temps.",
 };
 
-const services = [
+const offers = [
+  {
+    id: "site-crm",
+    title: "Site web + CRM : votre kit de demarrage digital",
+    description:
+      "Un site moderne qui vous represente, couple a un CRM pour gerer vos contacts, vos devis et votre planning. Le duo indispensable pour ne plus rien laisser passer.",
+    benefits: [
+      "Site vitrine rapide et professionnel (pas du WordPress)",
+      "CRM integre : contacts, entreprises, pipeline de ventes",
+      "Prise de rendez-vous en ligne pour vos clients",
+      "Facturation et devis directement depuis l'outil",
+      "Hebergement et maintenance inclus",
+    ],
+    price: "A partir de 3 000\u20AC",
+    priceNote: "+ 199\u20AC/mois tout compris",
+  },
   {
     id: "automatisation",
-    title: "Automatisation Intelligente",
+    title: "Automatisations IA : liberez votre temps",
     description:
-      "Nous automatisons vos workflows pour eliminer les taches repetitives et connecter vos outils entre eux. Gagnez du temps, reduisez les erreurs et concentrez vos equipes sur ce qui compte vraiment.",
-    examples: [
-      "Traitement automatique de documents et extraction de donnees",
-      "Pipelines de donnees intelligents entre vos applications",
-      "Integration CRM, ERP et outils metier avec couche IA",
-      "Workflows de validation et de routage automatises",
+      "Les taches repetitives qui vous prennent des heures ? On les automatise. Relances, emails, traitement de donnees — l'IA travaille pendant que vous vous concentrez sur l'essentiel.",
+    benefits: [
+      "Emails de bienvenue et relances automatiques",
+      "Suivi des prospects sans effort",
+      "Traitement automatique de documents",
+      "Connexion entre vos outils existants",
     ],
+    price: "A partir de 2 000\u20AC",
+    priceNote: "ou inclus dans le pack Site + CRM",
   },
   {
-    id: "agents",
-    title: "Agents IA Autonomes",
+    id: "accompagnement",
+    title: "Conseil et formation : on vous rend autonome",
     description:
-      "Deployez des agents IA capables d'agir de maniere autonome pour vos equipes. Grace a des outils comme Claude Code, nous creons des agents qui comprennent votre contexte metier et executent des taches complexes en toute independance.",
-    examples: [
-      "Agents de support client avec comprehension contextuelle",
-      "Agents de developpement logiciel autonomes (Claude Code)",
-      "Assistants metier specialises pour vos equipes",
-      "Agents de veille et d'analyse concurrentielle",
+      "L'IA vous fait peur ? Pas de panique. On prend le temps de vous expliquer, de vous former, et de definir ensemble ce qui a du sens pour votre activite.",
+    benefits: [
+      "Audit de vos processus actuels (gratuit, 30 min)",
+      "Formation pratique a vos nouveaux outils",
+      "Workshops IA pour vos equipes",
+      "Accompagnement continu et support reactif",
     ],
-  },
-  {
-    id: "audit",
-    title: "Audit & Strategie IA",
-    description:
-      "Nous evaluons la maturite IA de votre entreprise et identifions les opportunites a fort impact. Un diagnostic complet pour savoir exactement ou et comment l'IA peut transformer vos operations.",
-    examples: [
-      "Cartographie complete de vos processus automatisables",
-      "Analyse du ROI potentiel pour chaque opportunite identifiee",
-      "Feuille de route IA priorisee sur 6 a 18 mois",
-      "Benchmark sectoriel et veille technologique",
-    ],
-  },
-  {
-    id: "formation",
-    title: "Formation & Accompagnement",
-    description:
-      "Formez vos equipes a l'utilisation efficace des outils IA. Des workshops pratiques aux programmes de formation continues, nous rendons vos collaborateurs autonomes et performants avec l'IA.",
-    examples: [
-      "Workshops pratiques sur Claude, ChatGPT et les LLMs",
-      "Formation au prompting avance et aux bonnes pratiques",
-      "Accompagnement personnalise par equipe metier",
-      "Programmes de montee en competences progressifs",
-    ],
+    price: "Audit gratuit",
+    priceNote: "Formations a partir de 500\u20AC/jour",
   },
 ];
 
 const pricingTiers = [
   {
-    name: "Starter",
-    subtitle: "Ideal pour decouvrir",
-    description:
-      "Un audit initial complet de vos processus, suivi de recommandations concretes et priorisees pour integrer l'IA dans votre entreprise.",
+    name: "Essentiel",
+    subtitle: "Pour se lancer",
     features: [
-      "Audit de maturite IA",
-      "Identification des opportunites",
-      "Rapport detaille avec recommandations",
-      "Estimation du ROI potentiel",
-      "Session de restitution d'1h",
+      "Site vitrine professionnel",
+      "CRM basique (contacts, pipeline)",
+      "Hebergement inclus",
+      "Support par email",
     ],
+    price: "A partir de 3 000\u20AC",
+    monthly: "199\u20AC/mois",
+    cta: "On en parle",
     highlighted: false,
   },
   {
-    name: "Business",
-    subtitle: "Le plus populaire",
-    description:
-      "Implementation complete d'une solution IA sur mesure, de la conception au deploiement, avec un accompagnement dedie tout au long du projet.",
+    name: "Complet",
+    subtitle: "Le plus demande",
     features: [
-      "Tout le plan Starter inclus",
-      "Conception et architecture de la solution",
-      "Developpement et integration sur mesure",
-      "Tests et validation avec vos equipes",
-      "Formation des utilisateurs",
-      "Support post-deploiement de 30 jours",
+      "Tout le pack Essentiel",
+      "Facturation et devis integres",
+      "Automatisations email",
+      "Prise de RDV en ligne",
+      "Formation incluse (2h)",
+      "Support prioritaire",
     ],
+    price: "A partir de 5 000\u20AC",
+    monthly: "299\u20AC/mois",
+    cta: "Choisir ce pack",
     highlighted: true,
   },
   {
-    name: "Enterprise",
-    subtitle: "Transformation complete",
-    description:
-      "Un programme de transformation IA complet pour votre entreprise, avec un support continu et une evolution constante de vos solutions.",
+    name: "Sur-mesure",
+    subtitle: "Pour les ambitieux",
     features: [
-      "Tout le plan Business inclus",
-      "Strategie IA globale multi-projets",
-      "Deploiement de solutions multiples",
-      "Agents IA autonomes personnalises",
-      "Formation continue des equipes",
+      "Solution 100% personnalisee",
+      "Integrations specifiques",
+      "Agents IA dedies",
+      "Formation equipe complete",
       "Support premium continu",
-      "Revues trimestrielles et optimisations",
     ],
+    price: "Sur devis",
+    monthly: null,
+    cta: "Discutons-en",
     highlighted: false,
   },
 ];
@@ -119,28 +114,29 @@ export default function ServicesPage() {
         <div className="relative mx-auto max-w-7xl px-6 lg:px-8 text-center">
           <AnimatedSection>
             <p className="text-sm font-semibold uppercase tracking-widest text-primary">
-              Ce que nous faisons
+              Nos offres
             </p>
           </AnimatedSection>
           <AnimatedSection>
             <h1 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-              Nos <span className="gradient-text">Services</span>
+              Des solutions concretes pour des problemes{" "}
+              <span className="gradient-text">concretes</span>
             </h1>
           </AnimatedSection>
           <AnimatedSection>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-muted">
-              De l&apos;audit strategique a l&apos;implementation, nous vous
-              accompagnons a chaque etape de votre transformation IA.
+              Pas de jargon, pas de promesses en l&apos;air. On construit des
+              outils qui marchent et qui vous simplifient la vie.
             </p>
           </AnimatedSection>
         </div>
       </section>
 
-      {/* Services Detail */}
-      {services.map((service, index) => (
+      {/* Offers Detail */}
+      {offers.map((offer, index) => (
         <section
-          key={service.id}
-          id={service.id}
+          key={offer.id}
+          id={offer.id}
           className="relative py-24 scroll-mt-24"
         >
           {index % 2 === 1 && (
@@ -148,53 +144,72 @@ export default function ServicesPage() {
           )}
 
           <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
-            <div className={`flex flex-col gap-12 lg:flex-row lg:items-start lg:gap-16 ${index % 2 === 1 ? "lg:flex-row-reverse" : ""}`}>
-              <AnimatedSection direction={index % 2 === 0 ? "left" : "right"} className="flex-1">
+            <div
+              className={`flex flex-col gap-12 lg:flex-row lg:items-start lg:gap-16 ${
+                index % 2 === 1 ? "lg:flex-row-reverse" : ""
+              }`}
+            >
+              <AnimatedSection
+                direction={index % 2 === 0 ? "left" : "right"}
+                className="flex-1"
+              >
                 <div className="flex items-center gap-4">
                   <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-xl font-bold gradient-text glow">
                     0{index + 1}
                   </span>
                 </div>
                 <h2 className="mt-6 text-3xl font-bold tracking-tight sm:text-4xl">
-                  {service.title}
+                  {offer.title}
                 </h2>
                 <p className="mt-4 text-lg leading-8 text-muted">
-                  {service.description}
+                  {offer.description}
                 </p>
                 <ul className="mt-8 space-y-3">
-                  {service.examples.map((example) => (
-                    <li key={example} className="flex items-start gap-3">
-                      <svg className="mt-1.5 h-4 w-4 flex-shrink-0 text-primary" viewBox="0 0 16 16" fill="none">
-                        <path d="M2 8L6 12L14 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  {offer.benefits.map((benefit) => (
+                    <li key={benefit} className="flex items-start gap-3">
+                      <svg
+                        className="mt-1.5 h-4 w-4 flex-shrink-0 text-primary"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                      >
+                        <path
+                          d="M2 8L6 12L14 4"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
                       </svg>
-                      <span className="text-subtle">{example}</span>
+                      <span className="text-subtle">{benefit}</span>
                     </li>
                   ))}
                 </ul>
               </AnimatedSection>
 
-              <AnimatedSection direction={index % 2 === 0 ? "right" : "left"} delay={0.2} className="flex-1">
+              <AnimatedSection
+                direction={index % 2 === 0 ? "right" : "left"}
+                delay={0.2}
+                className="flex-1"
+              >
                 <div className="glass rounded-3xl p-8 lg:p-12">
                   <div className="flex flex-col items-center text-center">
                     <div className="flex h-24 w-24 items-center justify-center rounded-3xl bg-gradient-to-br from-primary/20 to-accent/30 animate-float">
-                      <span className="text-3xl font-bold gradient-text">0{index + 1}</span>
+                      <span className="text-3xl font-bold gradient-text">
+                        0{index + 1}
+                      </span>
                     </div>
-                    <h3 className="mt-8 text-xl font-semibold gradient-text">
-                      {service.title}
+                    <h3 className="mt-8 text-2xl font-bold gradient-text">
+                      {offer.price}
                     </h3>
                     <p className="mt-3 text-sm text-muted">
-                      {service.examples.length} domaines d&apos;expertise
+                      {offer.priceNote}
                     </p>
-                    <div className="mt-8 flex flex-wrap justify-center gap-2">
-                      {service.examples.map((example) => (
-                        <span
-                          key={example}
-                          className="rounded-full bg-surface-light px-3 py-1 text-xs text-muted border border-border"
-                        >
-                          {example.split(" ").slice(0, 3).join(" ")}...
-                        </span>
-                      ))}
-                    </div>
+                    <Link
+                      href="/contact"
+                      className="mt-8 inline-block rounded-full bg-primary px-6 py-3 text-sm font-semibold text-gray-900 transition-all hover:bg-primary-light hover:shadow-lg hover:shadow-primary/20"
+                    >
+                      En savoir plus
+                    </Link>
                   </div>
                 </div>
               </AnimatedSection>
@@ -210,22 +225,25 @@ export default function ServicesPage() {
 
         <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
           <div className="text-center">
-            <p className="text-sm font-semibold uppercase tracking-widest text-primary">
-              Tarification
-            </p>
-            <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">
-              Une offre adaptee a <span className="gradient-text">chaque besoin</span>
-            </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-lg text-muted">
-              Chaque entreprise est unique. Nos offres s&apos;adaptent a votre maturite, vos objectifs et votre budget.
-            </p>
+            <AnimatedSection>
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+                Combien ca <span className="gradient-text">coute</span> ?
+              </h2>
+            </AnimatedSection>
+            <AnimatedSection>
+              <p className="mx-auto mt-4 max-w-2xl text-lg text-muted">
+                Pas de surprise. Des prix clairs, adaptes a votre taille.
+              </p>
+            </AnimatedSection>
           </div>
 
-          <AnimatedSection stagger staggerDelay={0.15} className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-3">
+          <AnimatedSection
+            stagger
+            staggerDelay={0.15}
+            className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-3"
+          >
             {pricingTiers.map((tier) => (
-              <AnimatedCard
-                key={tier.name}
-              >
+              <AnimatedCard key={tier.name}>
                 <div
                   className={`relative flex flex-col rounded-3xl p-8 transition-all duration-300 hover:-translate-y-1 ${
                     tier.highlighted
@@ -242,22 +260,49 @@ export default function ServicesPage() {
                   )}
 
                   <div className="flex-1">
-                    <h3 className={`text-2xl font-bold ${tier.highlighted ? "gradient-text" : "text-foreground"}`}>
+                    <h3
+                      className={`text-2xl font-bold ${
+                        tier.highlighted
+                          ? "gradient-text"
+                          : "text-foreground"
+                      }`}
+                    >
                       {tier.name}
                     </h3>
-                    <p className="mt-1 text-sm font-medium text-primary/70">{tier.subtitle}</p>
-                    <p className="mt-4 text-sm leading-6 text-muted">{tier.description}</p>
-                    <div className="mt-6 flex items-baseline gap-2">
-                      <span className="text-3xl font-bold text-foreground">Sur devis</span>
+                    <p className="mt-1 text-sm font-medium text-primary/70">
+                      {tier.subtitle}
+                    </p>
+
+                    <div className="mt-6 flex flex-col">
+                      <span className="text-3xl font-bold text-foreground">
+                        {tier.price}
+                      </span>
+                      {tier.monthly && (
+                        <span className="mt-1 text-sm text-muted">
+                          {tier.monthly}
+                        </span>
+                      )}
                     </div>
 
                     <ul className="mt-8 space-y-3">
                       {tier.features.map((feature) => (
                         <li key={feature} className="flex items-start gap-3">
-                          <svg className="mt-0.5 h-5 w-5 flex-shrink-0 text-primary" viewBox="0 0 20 20" fill="none">
-                            <path d="M3 10L8 15L17 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                          <svg
+                            className="mt-0.5 h-5 w-5 flex-shrink-0 text-primary"
+                            viewBox="0 0 20 20"
+                            fill="none"
+                          >
+                            <path
+                              d="M3 10L8 15L17 5"
+                              stroke="currentColor"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
                           </svg>
-                          <span className="text-sm text-subtle">{feature}</span>
+                          <span className="text-sm text-subtle">
+                            {feature}
+                          </span>
                         </li>
                       ))}
                     </ul>
@@ -271,7 +316,7 @@ export default function ServicesPage() {
                         : "border border-border text-foreground hover:border-primary/50 hover:text-primary"
                     }`}
                   >
-                    Demander un devis
+                    {tier.cta}
                   </Link>
                 </div>
               </AnimatedCard>
@@ -286,17 +331,26 @@ export default function ServicesPage() {
           <AnimatedSection>
             <div className="glass rounded-3xl px-8 py-16 sm:px-16 glow">
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-                Identifions ensemble vos <span className="gradient-text">opportunites IA</span>
+                30 minutes pour{" "}
+                <span className="gradient-text">tout comprendre</span>
               </h2>
               <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-muted">
-                Un echange de 30 minutes pour comprendre vos enjeux et vous montrer concretement comment l&apos;IA peut transformer votre quotidien.
+                On se pose, on regarde votre situation, et on vous dit
+                honnetement ce qu&apos;on peut faire pour vous. Gratuit, zero
+                engagement.
               </p>
               <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-                <Link href="/contact" className="rounded-full bg-primary px-8 py-3.5 text-sm font-semibold text-gray-900 transition-all hover:bg-primary-light hover:shadow-lg hover:shadow-primary/20">
-                  Prendre rendez-vous
+                <Link
+                  href="/contact"
+                  className="rounded-full bg-primary px-8 py-3.5 text-sm font-semibold text-gray-900 transition-all hover:bg-primary-light hover:shadow-lg hover:shadow-primary/20"
+                >
+                  Reserver un appel
                 </Link>
-                <Link href="/about" className="rounded-full border border-border px-8 py-3.5 text-sm font-semibold text-foreground transition-all hover:border-primary/50 hover:text-primary">
-                  En savoir plus sur Optimus
+                <Link
+                  href="/contact"
+                  className="rounded-full border border-border px-8 py-3.5 text-sm font-semibold text-foreground transition-all hover:border-primary/50 hover:text-primary"
+                >
+                  Envoyer un message
                 </Link>
               </div>
             </div>
